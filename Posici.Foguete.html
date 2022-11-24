@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+    # Page Layouts
+
+    - Tables
+    -Floats e Clear
+    -Framewoeks e Grid Systems
+    - Flexbox
+    -Grid
+    
+    ## Posicionamntos
+
+    -Controlar ond, na página, o elemento
+    irá ficar, alterando o fluxo normal dos elementos.
+
+    -Nome: position
+    -Value: static/relative/absolute/fixed
+
+-->
+<html>
+    <head>
+        
+            <main>
+                <div class="box1 box"></div>
+                <div class="box2 box"></div>
+                <div class="box3 box"></div>
+            </main>
+            
+        <!--
+            ## Relative
+            
+            - top, right, left, z-index
+
+            # Absolute
+            ## Fixed
+            ## Elemento Stackias
+        -->
+        <!--
+            # Flexbox
+
+            *Nos permite posicionar os elementos 
+            dentro da caixa.
+            *Controle em uma diremensão
+            (Horizontal ou Vestical)
+            * Alinhamento, direcionamento, 
+            ordenar e tamnhos.
+
+            """"css
+            div.parent {
+                diplay: flex;
+            }
+            """"
+            ## flex-direction
+
+            * Qual a direção do flex:
+            horizonal ou vertical
+            *row / column
+
+            ## alinhamento
+
+            * justify-content
+            * align-items
+        -->
+        <div class="container">
+            <div class="box blue"></div>
+            <div class="box red"></div>
+            <div class="box green"></div>
+        </div>
+
+        <!--
+            # Grid
+* Posiionamento dos elementos dentro da caixa
+* Posicionamento Horizontal e vestical ao mesmo tempo
+* Pode ser flexivel ou fixo 
+* Cria espaços para os elementos filhos habitarem
+
+        -->
+
+    <body>
+        <head>
+<div>Logo</div>
+<div>Menu</div>
+        </head>
+    <main>Conteudo</main>
+    <aside>Infos adicionais</aside>
+    <footer>Rodape</footer>
+    </body>
+
+    <body>
+        <header>
+            <div>Logo</div>
+            <div>Menu</div>
+        </header>
+        <main>Conteúdo</main>
+        <aside>Infos adicionais</aside>
+        <footer>Rodapé</footer>
+    </body>
+    CSS
+    
+    body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer";
+        grid-template-rows: 30px 1fr 40px;
+        grid-template-columns: 1fr 80px;
+    }
+    
+    header {
+        grid-area: header;
+        background-color: green;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8px;
+    }
+    
+    main {
+        grid-area: main;
+        background-color: red;
+    }
+    
+    aside {
+        grid-area: aside;
+        background-color: blue;
+    }
+    
+    footer {
+        grid-area: footer;
+        background-color: gray;
+    }s
+
+    </head>
+</html>
